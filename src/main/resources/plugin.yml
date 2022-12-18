@@ -2,3 +2,4 @@ name: NoGPCheat
 version: '${project.version}'
 main: me.tranzitron.nogpcheat.NoGPCheat
 authors: [ Tranzitron ]
+description: ChatGPT powered anticheat
