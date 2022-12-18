@@ -27,6 +27,10 @@ public final class NoGPCheat extends JavaPlugin {
         detectionManager = new DetectionManager();
 
         System.out.println("Adding commands...");
+        registerCommands();
+    }
+
+    private void registerCommands(){
         getCommand("alerts").setExecutor(new AlertsCommand());
     }
 }

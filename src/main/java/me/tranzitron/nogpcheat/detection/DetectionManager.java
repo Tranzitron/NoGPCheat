@@ -3,6 +3,8 @@ package me.tranzitron.nogpcheat.detection;
 import lombok.val;
 import me.tranzitron.nogpcheat.NoGPCheat;
 import me.tranzitron.nogpcheat.detection.detections.ExampleCheck;
+import me.tranzitron.nogpcheat.detection.detections.ReachA;
+import me.tranzitron.nogpcheat.detection.detections.ReachB;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -26,6 +28,8 @@ public class DetectionManager implements Listener {
 
     private void addChecks() {
         detections.add(new ExampleCheck("Example A", CheckType.OTHER, true));
+        detections.add(new ReachA("Reach A", CheckType.COMBAT, true));
+        detections.add(new ReachB("Reach B", CheckType.COMBAT, true));
     }
 
     @EventHandler(priority = EventPriority.HIGH)

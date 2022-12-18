@@ -16,8 +16,16 @@ public class AlertsCommand implements CommandExecutor {
         }
         val player = (Player) sender;
         val user = NoGPCheat.INSTANCE.getUserManager().get(player);
-        user.alerts = !user.alerts;
-        player.sendMessage("§7Your alerts are now §r" + (user.alerts ? "§aon" : "§coff"));
+        if(args.length == 0){
+            user.alerts = !user.alerts;
+            player.sendMessage("§7Your alerts are now §r" + (user.alerts ? "§aon" : "§coff"));
+        } else if(args.length == 1){
+            user.alerts = !user.alerts;
+            player.sendMessage("§7Your alerts are now §r" + (user.alerts ? "§aon" : "§coff"));
+        } else {
+            sender.sendMessage("§cYou can only toggle one detection at a time");
+        }
+
         return true;
     }
 }

@@ -3,3 +3,27 @@ version: '${project.version}'
 main: me.tranzitron.nogpcheat.NoGPCheat
 authors: [ Tranzitron ]
 description: ChatGPT powered anticheat
+commands:
+  alerts:
+    description: Foo command
+    aliases:
+      - alert
+    permission:
+    permission-message: You do not have permission!
+    usage: /<command> [test|stop]
+  template:
+    description: Template command
+    aliases:
+      - TemplateAlias
+    permission: test.foo
+    permission-message: You do not have permission!
+    usage: /<command> [test|test]
+permissions:
+  anticheat.alerts:
+    description: Anticheat Alerts
+    default: op
+  test.*:
+    description: Wildcard permission
+    default: op
+    children:
+      test.foo: true

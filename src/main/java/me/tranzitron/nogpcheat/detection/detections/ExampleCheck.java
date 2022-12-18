@@ -13,17 +13,17 @@ public class ExampleCheck extends Detection {
 
     @Override
     public void onCombat(CheatUser user, Entity entity) {
-        user.getPlayer().sendMessage("You got in a fight");
+        //user.getPlayer().sendMessage("You got in a fight");
         if (user.vl.getOrDefault(this, 1) >= 3) {
             ban(user);
             return;
         }
-        flag(user);
+        //flag(user);
     }
 
     @Override
     public void onMove(CheatUser user, Location to, Location from) {
-        user.getPlayer().sendMessage("you moved!");
-        flag(user);
+        //user.getPlayer().sendMessage("you moved!");
+        //flag(user);
     }
 }
